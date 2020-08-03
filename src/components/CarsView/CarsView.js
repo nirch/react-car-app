@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container, Table} from 'react-bootstrap'
 
 
 class CarsView extends React.Component {
@@ -35,7 +36,7 @@ class CarsView extends React.Component {
                 </tr>);
 
             contentToRender =                 
-                <table className="table">
+                <Table>
                     <thead>
                         <tr>
                             <th>Brand</th>
@@ -48,8 +49,7 @@ class CarsView extends React.Component {
                     <tbody>
                         {carTableRows}
                     </tbody>
-                </table>
-
+                </Table>
 
         } else {
             // I don't have cars render a message
@@ -58,9 +58,9 @@ class CarsView extends React.Component {
         }
 
         return (
-            <div className="container">
+            <Container>
                 {contentToRender}
-            </div>
+            </Container>        
         );
     }
 }

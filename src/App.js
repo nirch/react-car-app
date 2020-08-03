@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CarModel from './data-model/CarModel'
 import CarsView from './components/CarsView/CarsView';
