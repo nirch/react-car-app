@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CarModel from './data-model/CarModel'
+import CarsView from './components/CarsView/CarsView';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div>
-      Car App
+      <CarsView/>
     </div>
   );
 }
