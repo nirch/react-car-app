@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CarModel from './data-model/CarModel'
 
 function App() {
+
+  const myCar = new CarModel("Toyota", "Yaris", 2002, 230000);
+  console.log(myCar);
+  console.log(myCar.kmPerYear());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Car App
     </div>
   );
 }
