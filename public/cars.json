@@ -19,5 +19,13 @@
         "model": "i30",
         "year": 2010,
         "km": 150000
+    },
+    {
+        "id": "4",
+        "brand": "Subaru",
+        "model": "Justy",
+        "year": 1988,
+        "km": 453000
     }
+
 ]

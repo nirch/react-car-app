@@ -6,6 +6,7 @@ class CarModel {
         this.model = model;
         this.year = year;
         this.km = km;
+        this.maintance = [];
     }
 
     kmPerYear() {
