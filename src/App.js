@@ -32,16 +32,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <HashRouter>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/cars">
-            <CarsView cars={this.state.cars} />
-          </Route>
-        </Switch>
-      </HashRouter>
+      <div>
+        {/* If I redner something before the router it will be rendered always (in any route) */}
+        {/* <p>bla bla bla</p> */}
+        <HashRouter>
+          <Switch>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/cars">
+              <CarsView cars={this.state.cars} />
+            </Route>
+          </Switch>
+        </HashRouter>
+      </div>
     );
 
   }
