@@ -6,6 +6,7 @@ import CarsView from './components/CarsView/CarsView';
 import axios from 'axios';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
+import CarDetails from './components/CarDetails';
 
 class App extends React.Component {
 
@@ -42,6 +43,9 @@ class App extends React.Component {
             </Route>
             <Route exact path="/cars">
               <CarsView cars={this.state.cars} />
+            </Route>
+            <Route exact path="/cars/:id">
+              <CarDetails/>
             </Route>
           </Switch>
         </HashRouter>
