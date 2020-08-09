@@ -19,6 +19,11 @@ class CarsView extends React.Component {
         return highestKmPerYear;
     }
 
+
+    openCar(index) {
+        alert(index);
+    }
+
     render() {
 
         let contentToRender;
@@ -26,8 +31,8 @@ class CarsView extends React.Component {
             // I have cars render a table with cars
             let highestKmPerYear = this.getHighestKMPerYear();
 
-            const carTableRows = this.props.cars.map(car =>
-                <tr className={car === highestKmPerYear ? "bg-danger" : ""}>
+            const carTableRows = this.props.cars.map((car, index) =>
+                <tr className={car === highestKmPerYear ? "bg-danger" : ""} onDoubleClick={() => this.openCar(index)}>
                     <td>{car.brand}</td>
                     <td>{car.model}</td>
                     <td>{car.km}</td>
