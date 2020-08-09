@@ -1,11 +1,21 @@
 import React from 'react';
 import {Container, Table} from 'react-bootstrap'
+import { Redirect } from 'react-router-dom';
 
 
 class CarsView extends React.Component {
 
     constructor(props) {
         super(props);
+
+        // redirectIndex - number - using this state in the redner function 
+        //  in order to decided if to redirect or not. If value is -1 not redirecting.
+        //  otherwise redirecting to '/cars/${redirectIndex}'
+        this.state = {
+            redirectIndex: -1
+        }
+
+        this.openCar = this.openCar.bind(this);
     }
 
 
@@ -21,10 +31,19 @@ class CarsView extends React.Component {
 
 
     openCar(index) {
-        alert(index);
+        // Redirect to '/cars/index' by updateing the state that will call render again
+        // that will render a Redirect componenet
+        this.setState({
+            redirectIndex: index
+        });
     }
 
     render() {
+
+        if (this.state.redirectIndex !== -1) {
+            const redirectPath = `/cars/${this.state.redirectIndex}`
+            return <Redirect to={redirectPath}/>
+        }
 
         let contentToRender;
         if (this.props.cars && this.props.cars.length >= 1) {
