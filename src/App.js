@@ -4,6 +4,7 @@ import './App.css';
 import CarModel from './data-model/CarModel'
 import CarsView from './components/CarsView/CarsView';
 import axios from 'axios';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -30,9 +31,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <CarsView cars={this.state.cars}/>
-      </div>
+      <HashRouter>
+        <Switch>
+          <Route path="/cars">
+            <CarsView cars={this.state.cars}/>
+          </Route>
+        </Switch>
+      </HashRouter>
     );
   
   }
