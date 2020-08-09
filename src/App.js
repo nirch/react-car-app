@@ -45,7 +45,7 @@ class App extends React.Component {
               <CarsView cars={this.state.cars} />
             </Route>
             <Route exact path="/cars/:id">
-              <CarDetails/>
+              {this.state.cars.length > 0 ? <CarDetails cars={this.state.cars} /> : null}
             </Route>
           </Switch>
         </HashRouter>
