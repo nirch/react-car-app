@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Table} from 'react-bootstrap'
 import { Redirect } from 'react-router-dom';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 
 class CarsView extends React.Component {
@@ -81,12 +82,35 @@ class CarsView extends React.Component {
                 <p style={{textAlign: "center"}}>No Cars to Show</p>
         }
 
+
+        let googleMaps = null;
+        if (this.props.cars && this.props.cars.length >= 1) {
+
+            const mapStyles = {
+                width: '600px',
+                height: '450px',
+            };
+
+            
+            googleMaps = 
+                <Map
+                google={this.props.google}
+                zoom={6}
+                style={mapStyles}
+                initialCenter={{ lat: 31.5132291, lng: 36.0781026}}
+                />
+        }
+
         return (
             <Container>
                 {contentToRender}
+                {googleMaps}
             </Container>        
         );
     }
 }
 
-export default CarsView;
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyAi5g_KBXE7z_IVdXbbr3oJV3E8YUn7Fec'
+  })(CarsView);
+
