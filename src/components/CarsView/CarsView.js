@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Table} from 'react-bootstrap'
 import { Redirect } from 'react-router-dom';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 
 class CarsView extends React.Component {
@@ -97,8 +97,10 @@ class CarsView extends React.Component {
                 google={this.props.google}
                 zoom={6}
                 style={mapStyles}
-                initialCenter={{ lat: 31.5132291, lng: 36.0781026}}
-                />
+                initialCenter={{ lat: 31.5132291, lng: 36.0781026}}>
+                    <Marker position={{lat: 32.0496356, lng: 34.7861492}}/>
+                    <Marker position={{lat: 31.7767234, lng: 35.2323198}}/>
+                </Map>
         }
 
         return (
