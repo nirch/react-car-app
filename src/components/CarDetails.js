@@ -16,6 +16,7 @@ function CarDetails(props) {
            <p>Year: {car.year}</p>
            <p>KM: {car.km}</p>
            <p>KM Per Year: {car.kmPerYear()}</p>
+           <p>Address: {car.address}</p>
        </div>
     )
 }

@@ -24,7 +24,7 @@ class App extends React.Component {
     axios.get("cars.json").then(response => {
       // console.log(response.data);
       this.setState({
-        cars: response.data.map(plainCar => new CarModel(plainCar.brand, plainCar.model, plainCar.year, plainCar.km))
+        cars: response.data.map(plainCar => new CarModel(plainCar.brand, plainCar.model, plainCar.year, plainCar.km, plainCar.address))
       })
     })
 

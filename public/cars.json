@@ -4,28 +4,32 @@
         "brand": "Toyota",
         "model": "Yaris",
         "year": 2002,
-        "km": 230000
+        "km": 230000,
+        "address": "הרצל 50, תל אביב"
     },
     {
         "id": "2",
         "brand": "Toyota",
         "model": "Corola",
         "year": 2015,
-        "km": 105000
+        "km": 105000,
+        "address": "הרצל 50, נתניה"
     },
     {
         "id": "3",
         "brand": "Hyundai",
         "model": "i30",
         "year": 2010,
-        "km": 150000
+        "km": 150000,
+        "address": "הרצל 50, רחובות"
     },
     {
         "id": "4",
         "brand": "Subaru",
         "model": "Justy",
         "year": 1988,
-        "km": 453000
+        "km": 453000,
+        "address": "הרצל 50, ירושלים"
     }
 
 ]
