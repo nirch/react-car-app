@@ -120,9 +120,9 @@ class CarsView extends React.Component {
             googleMaps = 
                 <Map
                 google={this.props.google}
-                zoom={6}
+                zoom={7}
                 style={mapStyles}
-                initialCenter={{ lat: 31.5132291, lng: 36.0781026}}>
+                initialCenter={{ lat: 31.046051, lng: 34.851612}}>
                     {markers}
                 </Map>
         }
